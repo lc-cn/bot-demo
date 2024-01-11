@@ -1,11 +1,11 @@
 {
   "name": "bot-demo",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "dev": "52bot -m dev",
+    "start": "52bot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
