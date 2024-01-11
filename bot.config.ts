@@ -1,5 +1,13 @@
-import { defineConfig } from '52bot';
-
+import { defineConfig,Plugin } from '52bot';
+const test=()=>{
+    return {
+        name:'test',
+        install(plugin:Plugin){
+            plugin.command('foo')
+                .action(()=>'bar')
+        }
+    }
+}
 export default defineConfig(({ mode }) => {
     return {
         plugins: [
@@ -8,6 +16,7 @@ export default defineConfig(({ mode }) => {
             'echo',
             'pluginManager',
             'testPlugin',
+            test()
         ],
     };
 });
